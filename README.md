@@ -1,3 +1,8 @@
+## Site en ligne
+http://mediatek86.alwaysdata.net
+
+## Back-office
+http://mediatek86.alwaysdata.net/login
 # Mediatekformation
 ## Présentation
 Ce site, développé avec Symfony 6.4, permet d'accéder aux vidéos d'auto-formation proposées par une chaîne de médiathèques et qui sont aussi accessibles sur YouTube.<br> 
