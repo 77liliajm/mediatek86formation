@@ -1,0 +1,72 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Admin - Catégories{% endblock %}
+{% block stylesheets %}{% endblock %}
+
+{% block top %}
+    <div class="container">
+        <div class="text-left">
+            <img src="{{ app.request.getBasePath()~'/banniere.jpg' }}" alt="banniere du site Mediatek">
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ path('admin_formations') }}">Formations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('admin_playlists') }}">Playlists</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('admin_categories') }}">Catégories</a></li>
+                    <li class="nav-item"><a class="nav-link text-danger" href="{{ path('app_logout') }}">Déconnexion</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>Gestion des catégories</h1>
+
+    <h4>Ajouter une catégorie</h4>
+    <form method="post" action="{{ path('admin_categories_ajouter') }}" class="mb-4">
+        <div class="input-group" style="max-width: 400px;">
+            <input type="text" name="nom" class="form-control" placeholder="Nom de la catégorie"
+                   value="{{ app.request.request.get('nom') }}">
+            <input type="hidden" name="_token" value="{{ csrf_token('ajouter_categorie') }}">
+            <button type="submit" class="btn btn-success">Ajouter</button>
+        </div>
+        {% if erreur %}
+            <div class="text-danger mt-1">{{ erreur }}</div>
+        {% endif %}
+    </form>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for categorie in categories %}
+                <tr>
+                    <td>{{ categorie.name }}</td>
+                    <td>
+                        {% if categorie.formations is empty %}
+                            <form method="post" action="{{ path('admin_categories_supprimer', {id: categorie.id}) }}"
+                                  style="display:inline"
+                                  onsubmit="return confirm('Supprimer cette catégorie ?')">
+                                <input type="hidden" name="_token" value="{{ csrf_token('supprimer_categorie_'~categorie.id) }}">
+                                <button type="submit" class="btn btn-sm btn-danger">Supprimer</button>
+                            </form>
+                        {% else %}
+                            <button class="btn btn-sm btn-danger" disabled title="Rattachée à des formations">Supprimer</button>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block footer %}{% endblock %}
+{% block javascripts %}{% endblock %}

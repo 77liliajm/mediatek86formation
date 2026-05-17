@@ -1,0 +1,97 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Admin - Formations{% endblock %}
+{% block stylesheets %}{% endblock %}
+
+{% block top %}
+    <div class="container">
+        <div class="text-left">
+            <img src="{{ app.request.getBasePath()~'/banniere.jpg' }}" alt="banniere du site Mediatek">
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ path('admin_formations') }}">Formations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('admin_playlists') }}">Playlists</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('admin_categories') }}">Catégories</a></li>
+                    <li class="nav-item"><a class="nav-link text-danger" href="{{ path('app_logout') }}">Déconnexion</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>Gestion des formations</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-left align-top" scope="col">
+                    formation<br />
+                    <a href="{{ path('admin_formations_sort', {champ:'title', ordre:'ASC'}) }}" class="btn btn-info btn-sm">&#60;</a>
+                    <a href="{{ path('admin_formations_sort', {champ:'title', ordre:'DESC'}) }}" class="btn btn-info btn-sm">&#62;</a>
+                    <form method="POST" action="{{ path('admin_formations_search', {champ:'title'}) }}">
+                        <input type="text" name="recherche" value="{% if valeur|default and not table|default %}{{ valeur }}{% endif %}">
+                        <input type="hidden" name="_token" value="{{ csrf_token('filtre_title') }}">
+                        <button type="submit" class="btn btn-info btn-sm">filtrer</button>
+                    </form>
+                </th>
+                <th class="text-left align-top" scope="col">
+                    playlist<br />
+                    <a href="{{ path('admin_formations_sort', {table:'playlist', champ:'name', ordre:'ASC'}) }}" class="btn btn-info btn-sm">&#60;</a>
+                    <a href="{{ path('admin_formations_sort', {table:'playlist', champ:'name', ordre:'DESC'}) }}" class="btn btn-info btn-sm">&#62;</a>
+                    <form method="POST" action="{{ path('admin_formations_search', {champ:'name', table:'playlist'}) }}">
+                        <input type="text" name="recherche" value="{% if valeur|default and table|default and table=='playlist' %}{{ valeur }}{% endif %}">
+                        <input type="hidden" name="_token" value="{{ csrf_token('filtre_name') }}">
+                        <button type="submit" class="btn btn-info btn-sm">filtrer</button>
+                    </form>
+                </th>
+                <th class="text-left align-top" scope="col">
+                    catégories
+                    <form method="POST" action="{{ path('admin_formations_search', {champ:'id', table:'categories'}) }}">
+                        <select class="form-select form-select-sm" name="recherche" onchange="this.form.submit()">
+                            <option value=""></option>
+                            {% for categorie in categories %}
+                                <option {% if valeur|default and valeur==categorie.id %}selected{% endif %} value="{{ categorie.id }}">{{ categorie.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </form>
+                </th>
+                <th class="text-center align-top" scope="col">
+                    date<br />
+                    <a href="{{ path('admin_formations_sort', {champ:'publishedAt', ordre:'ASC'}) }}" class="btn btn-info btn-sm">&#60;</a>
+                    <a href="{{ path('admin_formations_sort', {champ:'publishedAt', ordre:'DESC'}) }}" class="btn btn-info btn-sm">&#62;</a>
+                </th>
+                <th class="text-center align-top" scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for formation in formations %}
+                <tr class="align-middle">
+                    <td>{{ formation.title }}</td>
+                    <td>{{ formation.playlist ? formation.playlist.name : '' }}</td>
+                    <td>
+                        {% for categorie in formation.categories %}
+                            {{ categorie.name }}<br>
+                        {% endfor %}
+                    </td>
+                    <td class="text-center">{{ formation.publishedAtString }}</td>
+                    <td class="text-center">
+                        <a href="{{ path('admin_formations_modifier', {id: formation.id}) }}" class="btn btn-sm btn-warning">Modifier</a>
+                        <form method="post" action="{{ path('admin_formations_supprimer', {id: formation.id}) }}"
+                              style="display:inline"
+                              onsubmit="return confirm('Supprimer cette formation et ses liens avec les playlists ?')">
+                            <input type="hidden" name="_token" value="{{ csrf_token('supprimer_formation_'~formation.id) }}">
+                            <button type="submit" class="btn btn-sm btn-danger">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block footer %}{% endblock %}
+{% block javascripts %}{% endblock %}

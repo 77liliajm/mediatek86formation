@@ -7,6 +7,10 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
+/**
+ * Entité représentant une catégorie de formation
+ * Jomaa Lilia
+ */
 #[ORM\Entity(repositoryClass: CategorieRepository::class)]
 class Categorie
 {
@@ -29,24 +33,34 @@ class Categorie
         $this->formations = new ArrayCollection();
     }
 
+    /**
+     * Retourne l'identifiant de la catégorie
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * Retourne le nom de la catégorie
+     */
     public function getName(): ?string
     {
         return $this->name;
     }
 
+    /**
+     * Définit le nom de la catégorie
+     */
     public function setName(?string $name): static
     {
         $this->name = $name;
-
         return $this;
     }
 
     /**
+     * Retourne la liste des formations rattachées à la catégorie
+     *
      * @return Collection<int, Formation>
      */
     public function getFormations(): Collection
@@ -54,22 +68,26 @@ class Categorie
         return $this->formations;
     }
 
+    /**
+     * Ajoute une formation à la catégorie
+     */
     public function addFormation(Formation $formation): static
     {
         if (!$this->formations->contains($formation)) {
             $this->formations->add($formation);
             $formation->addCategory($this);
         }
-
         return $this;
     }
 
+    /**
+     * Retire une formation de la catégorie
+     */
     public function removeFormation(Formation $formation): static
     {
         if ($this->formations->removeElement($formation)) {
             $formation->removeCategory($this);
         }
-
         return $this;
     }
 }

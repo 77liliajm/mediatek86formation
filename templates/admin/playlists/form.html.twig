@@ -1,0 +1,57 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ titre }}{% endblock %}
+{% block stylesheets %}{% endblock %}
+
+{% block top %}
+    <div class="container">
+        <div class="text-left">
+            <img src="{{ app.request.getBasePath()~'/banniere.jpg' }}" alt="banniere du site Mediatek">
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ path('admin_formations') }}">Formations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('admin_playlists') }}">Playlists</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('admin_categories') }}">Catégories</a></li>
+                    <li class="nav-item"><a class="nav-link text-danger" href="{{ path('app_logout') }}">Déconnexion</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>{{ titre }}</h1>
+    {{ form_start(form) }}
+        <div class="mb-3">{{ form_row(form.name) }}</div>
+        <div class="mb-3">{{ form_row(form.description) }}</div>
+        <button type="submit" class="btn btn-success">Enregistrer</button>
+        <a href="{{ path('admin_playlists') }}" class="btn btn-secondary">Annuler</a>
+    {{ form_end(form) }}
+
+    {% if playlist is defined and playlist.formations is not empty %}
+        <h3 class="mt-5">Formations de cette playlist</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for formation in playlist.formations %}
+                    <tr>
+                        <td>{{ formation.title }}</td>
+                        <td>{{ formation.publishedAtString }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block footer %}{% endblock %}
+{% block javascripts %}{% endblock %}

@@ -1,0 +1,3098 @@
+<?xml version="1.0"?>
+<project name="Documentation">
+                <file path="src/Controller/AccueilController.php" hash="d48ded29b2dd6648922d81ba504528ad">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Controller"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Controller" line="14">
+                    <name>AccueilController</name>
+                    <full_name>\App\Controller\AccueilController</full_name>
+                    <docblock line="14">
+    <description>Description of AccueilController</description>
+    <long-description></long-description>
+                    <tag
+                name="author"
+                description="emds"
+                                                                                                />
+                            <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                                            <extends>\Symfony\Bundle\FrameworkBundle\Controller\AbstractController</extends> 
+                    
+                                        
+                                            <property namespace="\App\Controller\AccueilController" line="19" visibility="private">
+    <name>repository</name>
+    <full_name>\App\Controller\AccueilController::$repository</full_name>
+    <default></default>
+        <docblock line="19">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="var"
+                description=""
+                                                                                                 type="\App\Repository\FormationRepository"/>
+                        </docblock>
+
+</property>
+
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller" line="25" visibility="public" returnByReference="false">
+    <name>__construct</name>
+    <full_name>\App\Controller\AccueilController::__construct()</full_name>
+    <value></value>
+                <argument line="25" by_reference="false">
+    <name>repository</name>
+    <default></default>
+    <type>\App\Repository\FormationRepository</type>
+</argument>
+
+        <docblock line="25">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="param"
+                description=""
+                                                                 variable="repository"                                 type="\App\Repository\FormationRepository"/>
+                        </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller" line="29" visibility="public" returnByReference="false">
+    <name>index</name>
+    <full_name>\App\Controller\AccueilController::index()</full_name>
+    <value></value>
+            <docblock line="29">
+    <description></description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller" line="37" visibility="public" returnByReference="false">
+    <name>cgu</name>
+    <full_name>\App\Controller\AccueilController::cgu()</full_name>
+    <value></value>
+            <docblock line="37">
+    <description></description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Controller/Admin/AdminCategorieController.php" hash="9ee757c7cefd9b18f3decc4a10d0359c">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Controller\Admin"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Controller\Admin" line="17">
+                    <name>AdminCategorieController</name>
+                    <full_name>\App\Controller\Admin\AdminCategorieController</full_name>
+                    <docblock line="17">
+    <description>Contrôleur de gestion des catégories (back-office)
+Jomaa Lilia</description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                                            <extends>\Symfony\Bundle\FrameworkBundle\Controller\AbstractController</extends> 
+                    
+                                        
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller\Admin" line="23" visibility="public" returnByReference="false">
+    <name>index</name>
+    <full_name>\App\Controller\Admin\AdminCategorieController::index()</full_name>
+    <value></value>
+                <argument line="23" by_reference="false">
+    <name>repo</name>
+    <default></default>
+    <type>\App\Repository\CategorieRepository</type>
+</argument>
+
+        <docblock line="23">
+    <description>Affiche la liste des catégories</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller\Admin" line="35" visibility="public" returnByReference="false">
+    <name>ajouter</name>
+    <full_name>\App\Controller\Admin\AdminCategorieController::ajouter()</full_name>
+    <value></value>
+                <argument line="35" by_reference="false">
+    <name>request</name>
+    <default></default>
+    <type>\Symfony\Component\HttpFoundation\Request</type>
+</argument>
+
+            <argument line="35" by_reference="false">
+    <name>repo</name>
+    <default></default>
+    <type>\App\Repository\CategorieRepository</type>
+</argument>
+
+            <argument line="35" by_reference="false">
+    <name>em</name>
+    <default></default>
+    <type>\Doctrine\ORM\EntityManagerInterface</type>
+</argument>
+
+        <docblock line="35">
+    <description>Ajoute une nouvelle catégorie avec vérification d&#039;unicité du nom</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller\Admin" line="68" visibility="public" returnByReference="false">
+    <name>supprimer</name>
+    <full_name>\App\Controller\Admin\AdminCategorieController::supprimer()</full_name>
+    <value></value>
+                <argument line="68" by_reference="false">
+    <name>id</name>
+    <default></default>
+    <type>int</type>
+</argument>
+
+            <argument line="68" by_reference="false">
+    <name>repo</name>
+    <default></default>
+    <type>\App\Repository\CategorieRepository</type>
+</argument>
+
+            <argument line="68" by_reference="false">
+    <name>em</name>
+    <default></default>
+    <type>\Doctrine\ORM\EntityManagerInterface</type>
+</argument>
+
+            <argument line="68" by_reference="false">
+    <name>request</name>
+    <default></default>
+    <type>\Symfony\Component\HttpFoundation\Request</type>
+</argument>
+
+        <docblock line="68">
+    <description>Supprime une catégorie si elle n&#039;est rattachée à aucune formation</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Controller/Admin/AdminFormationController.php" hash="7704c96bf366ad51c0eb2b9acdfe8e4d">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Controller\Admin"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Controller\Admin" line="19">
+                    <name>AdminFormationController</name>
+                    <full_name>\App\Controller\Admin\AdminFormationController</full_name>
+                    <docblock line="19">
+    <description>Contrôleur de gestion des formations (back-office)
+Jomaa Lilia</description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                                            <extends>\Symfony\Bundle\FrameworkBundle\Controller\AbstractController</extends> 
+                    
+                                        
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller\Admin" line="25" visibility="public" returnByReference="false">
+    <name>index</name>
+    <full_name>\App\Controller\Admin\AdminFormationController::index()</full_name>
+    <value></value>
+                <argument line="25" by_reference="false">
+    <name>repo</name>
+    <default></default>
+    <type>\App\Repository\FormationRepository</type>
+</argument>
+
+            <argument line="25" by_reference="false">
+    <name>catRepo</name>
+    <default></default>
+    <type>\App\Repository\CategorieRepository</type>
+</argument>
+
+        <docblock line="25">
+    <description>Affiche la liste des formations</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller\Admin" line="37" visibility="public" returnByReference="false">
+    <name>sort</name>
+    <full_name>\App\Controller\Admin\AdminFormationController::sort()</full_name>
+    <value></value>
+                <argument line="37" by_reference="false">
+    <name>champ</name>
+    <default></default>
+    <type>mixed</type>
+</argument>
+
+            <argument line="37" by_reference="false">
+    <name>ordre</name>
+    <default></default>
+    <type>mixed</type>
+</argument>
+
+            <argument line="37" by_reference="false">
+    <name>repo</name>
+    <default></default>
+    <type>\App\Repository\FormationRepository</type>
+</argument>
+
+            <argument line="37" by_reference="false">
+    <name>catRepo</name>
+    <default></default>
+    <type>\App\Repository\CategorieRepository</type>
+</argument>
+
+            <argument line="37" by_reference="false">
+    <name>table</name>
+    <default>&#039;&#039;</default>
+    <type>mixed</type>
+</argument>
+
+        <docblock line="37">
+    <description>Affiche la liste des formations triées sur un champ</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller\Admin" line="49" visibility="public" returnByReference="false">
+    <name>search</name>
+    <full_name>\App\Controller\Admin\AdminFormationController::search()</full_name>
+    <value></value>
+                <argument line="49" by_reference="false">
+    <name>champ</name>
+    <default></default>
+    <type>mixed</type>
+</argument>
+
+            <argument line="49" by_reference="false">
+    <name>request</name>
+    <default></default>
+    <type>\Symfony\Component\HttpFoundation\Request</type>
+</argument>
+
+            <argument line="49" by_reference="false">
+    <name>repo</name>
+    <default></default>
+    <type>\App\Repository\FormationRepository</type>
+</argument>
+
+            <argument line="49" by_reference="false">
+    <name>catRepo</name>
+    <default></default>
+    <type>\App\Repository\CategorieRepository</type>
+</argument>
+
+            <argument line="49" by_reference="false">
+    <name>table</name>
+    <default>&#039;&#039;</default>
+    <type>mixed</type>
+</argument>
+
+        <docblock line="49">
+    <description>Affiche la liste des formations filtrées sur un champ</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller\Admin" line="64" visibility="public" returnByReference="false">
+    <name>supprimer</name>
+    <full_name>\App\Controller\Admin\AdminFormationController::supprimer()</full_name>
+    <value></value>
+                <argument line="64" by_reference="false">
+    <name>id</name>
+    <default></default>
+    <type>int</type>
+</argument>
+
+            <argument line="64" by_reference="false">
+    <name>repo</name>
+    <default></default>
+    <type>\App\Repository\FormationRepository</type>
+</argument>
+
+            <argument line="64" by_reference="false">
+    <name>em</name>
+    <default></default>
+    <type>\Doctrine\ORM\EntityManagerInterface</type>
+</argument>
+
+            <argument line="64" by_reference="false">
+    <name>request</name>
+    <default></default>
+    <type>\Symfony\Component\HttpFoundation\Request</type>
+</argument>
+
+        <docblock line="64">
+    <description>Supprime une formation et ses liens avec les playlists</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller\Admin" line="78" visibility="public" returnByReference="false">
+    <name>ajouter</name>
+    <full_name>\App\Controller\Admin\AdminFormationController::ajouter()</full_name>
+    <value></value>
+                <argument line="78" by_reference="false">
+    <name>request</name>
+    <default></default>
+    <type>\Symfony\Component\HttpFoundation\Request</type>
+</argument>
+
+            <argument line="78" by_reference="false">
+    <name>em</name>
+    <default></default>
+    <type>\Doctrine\ORM\EntityManagerInterface</type>
+</argument>
+
+            <argument line="78" by_reference="false">
+    <name>catRepo</name>
+    <default></default>
+    <type>\App\Repository\CategorieRepository</type>
+</argument>
+
+        <docblock line="78">
+    <description>Affiche le formulaire d&#039;ajout d&#039;une formation et traite la soumission</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller\Admin" line="98" visibility="public" returnByReference="false">
+    <name>modifier</name>
+    <full_name>\App\Controller\Admin\AdminFormationController::modifier()</full_name>
+    <value></value>
+                <argument line="98" by_reference="false">
+    <name>id</name>
+    <default></default>
+    <type>int</type>
+</argument>
+
+            <argument line="98" by_reference="false">
+    <name>request</name>
+    <default></default>
+    <type>\Symfony\Component\HttpFoundation\Request</type>
+</argument>
+
+            <argument line="98" by_reference="false">
+    <name>repo</name>
+    <default></default>
+    <type>\App\Repository\FormationRepository</type>
+</argument>
+
+            <argument line="98" by_reference="false">
+    <name>em</name>
+    <default></default>
+    <type>\Doctrine\ORM\EntityManagerInterface</type>
+</argument>
+
+        <docblock line="98">
+    <description>Affiche le formulaire de modification d&#039;une formation et traite la soumission</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Controller/Admin/AdminPlaylistController.php" hash="f17fad5ed61315ebf002dd7bc81e5787">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Controller\Admin"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Controller\Admin" line="18">
+                    <name>AdminPlaylistController</name>
+                    <full_name>\App\Controller\Admin\AdminPlaylistController</full_name>
+                    <docblock line="18">
+    <description>Contrôleur de gestion des playlists (back-office)
+Jomaa Lilia</description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                                            <extends>\Symfony\Bundle\FrameworkBundle\Controller\AbstractController</extends> 
+                    
+                                        
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller\Admin" line="24" visibility="public" returnByReference="false">
+    <name>index</name>
+    <full_name>\App\Controller\Admin\AdminPlaylistController::index()</full_name>
+    <value></value>
+                <argument line="24" by_reference="false">
+    <name>repo</name>
+    <default></default>
+    <type>\App\Repository\PlaylistRepository</type>
+</argument>
+
+        <docblock line="24">
+    <description>Affiche la liste des playlists</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller\Admin" line="35" visibility="public" returnByReference="false">
+    <name>ajouter</name>
+    <full_name>\App\Controller\Admin\AdminPlaylistController::ajouter()</full_name>
+    <value></value>
+                <argument line="35" by_reference="false">
+    <name>request</name>
+    <default></default>
+    <type>\Symfony\Component\HttpFoundation\Request</type>
+</argument>
+
+            <argument line="35" by_reference="false">
+    <name>em</name>
+    <default></default>
+    <type>\Doctrine\ORM\EntityManagerInterface</type>
+</argument>
+
+        <docblock line="35">
+    <description>Affiche le formulaire d&#039;ajout d&#039;une playlist et traite la soumission</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller\Admin" line="55" visibility="public" returnByReference="false">
+    <name>modifier</name>
+    <full_name>\App\Controller\Admin\AdminPlaylistController::modifier()</full_name>
+    <value></value>
+                <argument line="55" by_reference="false">
+    <name>id</name>
+    <default></default>
+    <type>int</type>
+</argument>
+
+            <argument line="55" by_reference="false">
+    <name>request</name>
+    <default></default>
+    <type>\Symfony\Component\HttpFoundation\Request</type>
+</argument>
+
+            <argument line="55" by_reference="false">
+    <name>repo</name>
+    <default></default>
+    <type>\App\Repository\PlaylistRepository</type>
+</argument>
+
+            <argument line="55" by_reference="false">
+    <name>em</name>
+    <default></default>
+    <type>\Doctrine\ORM\EntityManagerInterface</type>
+</argument>
+
+        <docblock line="55">
+    <description>Affiche le formulaire de modification d&#039;une playlist et traite la soumission</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller\Admin" line="78" visibility="public" returnByReference="false">
+    <name>supprimer</name>
+    <full_name>\App\Controller\Admin\AdminPlaylistController::supprimer()</full_name>
+    <value></value>
+                <argument line="78" by_reference="false">
+    <name>id</name>
+    <default></default>
+    <type>int</type>
+</argument>
+
+            <argument line="78" by_reference="false">
+    <name>repo</name>
+    <default></default>
+    <type>\App\Repository\PlaylistRepository</type>
+</argument>
+
+            <argument line="78" by_reference="false">
+    <name>em</name>
+    <default></default>
+    <type>\Doctrine\ORM\EntityManagerInterface</type>
+</argument>
+
+            <argument line="78" by_reference="false">
+    <name>request</name>
+    <default></default>
+    <type>\Symfony\Component\HttpFoundation\Request</type>
+</argument>
+
+        <docblock line="78">
+    <description>Supprime une playlist si aucune formation n&#039;y est rattachée</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Controller/AdminController.php" hash="1ad25cdf4aabd8eab75441ce15482096">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Controller"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Controller" line="13">
+                    <name>AdminController</name>
+                    <full_name>\App\Controller\AdminController</full_name>
+                    <docblock line="13">
+    <description>Contrôleur de la page d&#039;accueil du back-office
+Jomaa Lilia</description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                                            <extends>\Symfony\Bundle\FrameworkBundle\Controller\AbstractController</extends> 
+                    
+                                        
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller" line="19" visibility="public" returnByReference="false">
+    <name>index</name>
+    <full_name>\App\Controller\AdminController::index()</full_name>
+    <value></value>
+            <docblock line="19">
+    <description>Affiche la page d&#039;accueil du back-office
+Redirige vers la page de connexion si l&#039;utilisateur n&#039;est pas authentifié</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Controller/FormationsController.php" hash="99f409a0763f290439f1ca62a514574e">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Controller"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Controller" line="16">
+                    <name>FormationsController</name>
+                    <full_name>\App\Controller\FormationsController</full_name>
+                    <docblock line="16">
+    <description>Controleur des formations</description>
+    <long-description></long-description>
+                    <tag
+                name="author"
+                description="emds"
+                                                                                                />
+                            <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                                            <extends>\Symfony\Bundle\FrameworkBundle\Controller\AbstractController</extends> 
+                    
+                                        
+                                            <property namespace="\App\Controller\FormationsController" line="22" visibility="private">
+    <name>formationRepository</name>
+    <full_name>\App\Controller\FormationsController::$formationRepository</full_name>
+    <default></default>
+        <docblock line="22">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="var"
+                description=""
+                                                                                                 type="\App\Repository\FormationRepository"/>
+                        </docblock>
+
+</property>
+
+                                            <property namespace="\App\Controller\FormationsController" line="28" visibility="private">
+    <name>categorieRepository</name>
+    <full_name>\App\Controller\FormationsController::$categorieRepository</full_name>
+    <default></default>
+        <docblock line="28">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="var"
+                description=""
+                                                                                                 type="\App\Repository\CategorieRepository"/>
+                        </docblock>
+
+</property>
+
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller" line="30" visibility="public" returnByReference="false">
+    <name>__construct</name>
+    <full_name>\App\Controller\FormationsController::__construct()</full_name>
+    <value></value>
+                <argument line="30" by_reference="false">
+    <name>formationRepository</name>
+    <default></default>
+    <type>\App\Repository\FormationRepository</type>
+</argument>
+
+            <argument line="30" by_reference="false">
+    <name>categorieRepository</name>
+    <default></default>
+    <type>\App\Repository\CategorieRepository</type>
+</argument>
+
+        <docblock line="30">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller" line="35" visibility="public" returnByReference="false">
+    <name>index</name>
+    <full_name>\App\Controller\FormationsController::index()</full_name>
+    <value></value>
+            <docblock line="35">
+    <description></description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller" line="45" visibility="public" returnByReference="false">
+    <name>sort</name>
+    <full_name>\App\Controller\FormationsController::sort()</full_name>
+    <value></value>
+                <argument line="45" by_reference="false">
+    <name>champ</name>
+    <default></default>
+    <type>mixed</type>
+</argument>
+
+            <argument line="45" by_reference="false">
+    <name>ordre</name>
+    <default></default>
+    <type>mixed</type>
+</argument>
+
+            <argument line="45" by_reference="false">
+    <name>table</name>
+    <default>&quot;&quot;</default>
+    <type>mixed</type>
+</argument>
+
+        <docblock line="45">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller" line="55" visibility="public" returnByReference="false">
+    <name>findAllContain</name>
+    <full_name>\App\Controller\FormationsController::findAllContain()</full_name>
+    <value></value>
+                <argument line="55" by_reference="false">
+    <name>champ</name>
+    <default></default>
+    <type>mixed</type>
+</argument>
+
+            <argument line="55" by_reference="false">
+    <name>request</name>
+    <default></default>
+    <type>\Symfony\Component\HttpFoundation\Request</type>
+</argument>
+
+            <argument line="55" by_reference="false">
+    <name>table</name>
+    <default>&quot;&quot;</default>
+    <type>mixed</type>
+</argument>
+
+        <docblock line="55">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller" line="68" visibility="public" returnByReference="false">
+    <name>showOne</name>
+    <full_name>\App\Controller\FormationsController::showOne()</full_name>
+    <value></value>
+                <argument line="68" by_reference="false">
+    <name>id</name>
+    <default></default>
+    <type>mixed</type>
+</argument>
+
+        <docblock line="68">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Controller/PlaylistsController.php" hash="a698fa06bb9c901d2b2b402d0681e6b9">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Controller"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Controller" line="17">
+                    <name>PlaylistsController</name>
+                    <full_name>\App\Controller\PlaylistsController</full_name>
+                    <docblock line="17">
+    <description>Description of PlaylistsController</description>
+    <long-description></long-description>
+                    <tag
+                name="author"
+                description="emds"
+                                                                                                />
+                            <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                                            <extends>\Symfony\Bundle\FrameworkBundle\Controller\AbstractController</extends> 
+                    
+                                        
+                                            <property namespace="\App\Controller\PlaylistsController" line="23" visibility="private">
+    <name>playlistRepository</name>
+    <full_name>\App\Controller\PlaylistsController::$playlistRepository</full_name>
+    <default></default>
+        <docblock line="23">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="var"
+                description=""
+                                                                                                 type="\App\Repository\PlaylistRepository"/>
+                        </docblock>
+
+</property>
+
+                                            <property namespace="\App\Controller\PlaylistsController" line="29" visibility="private">
+    <name>formationRepository</name>
+    <full_name>\App\Controller\PlaylistsController::$formationRepository</full_name>
+    <default></default>
+        <docblock line="29">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="var"
+                description=""
+                                                                                                 type="\App\Repository\FormationRepository"/>
+                        </docblock>
+
+</property>
+
+                                            <property namespace="\App\Controller\PlaylistsController" line="35" visibility="private">
+    <name>categorieRepository</name>
+    <full_name>\App\Controller\PlaylistsController::$categorieRepository</full_name>
+    <default></default>
+        <docblock line="35">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="var"
+                description=""
+                                                                                                 type="\App\Repository\CategorieRepository"/>
+                        </docblock>
+
+</property>
+
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller" line="37" visibility="public" returnByReference="false">
+    <name>__construct</name>
+    <full_name>\App\Controller\PlaylistsController::__construct()</full_name>
+    <value></value>
+                <argument line="37" by_reference="false">
+    <name>playlistRepository</name>
+    <default></default>
+    <type>\App\Repository\PlaylistRepository</type>
+</argument>
+
+            <argument line="37" by_reference="false">
+    <name>categorieRepository</name>
+    <default></default>
+    <type>\App\Repository\CategorieRepository</type>
+</argument>
+
+            <argument line="37" by_reference="false">
+    <name>formationRespository</name>
+    <default></default>
+    <type>\App\Repository\FormationRepository</type>
+</argument>
+
+        <docblock line="37">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller" line="49" visibility="public" returnByReference="false">
+    <name>index</name>
+    <full_name>\App\Controller\PlaylistsController::index()</full_name>
+    <value></value>
+            <docblock line="49">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="Route"
+                description="(&quot;/playlists&quot;, name=&quot;playlists&quot;)"
+                                                                                                />
+                            <tag
+                name="return"
+                description=""
+                                                                                                 type="\Symfony\Component\HttpFoundation\Response"/>
+                        </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller" line="59" visibility="public" returnByReference="false">
+    <name>sort</name>
+    <full_name>\App\Controller\PlaylistsController::sort()</full_name>
+    <value></value>
+                <argument line="59" by_reference="false">
+    <name>champ</name>
+    <default></default>
+    <type>mixed</type>
+</argument>
+
+            <argument line="59" by_reference="false">
+    <name>ordre</name>
+    <default></default>
+    <type>mixed</type>
+</argument>
+
+        <docblock line="59">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller" line="76" visibility="public" returnByReference="false">
+    <name>findAllContain</name>
+    <full_name>\App\Controller\PlaylistsController::findAllContain()</full_name>
+    <value></value>
+                <argument line="76" by_reference="false">
+    <name>champ</name>
+    <default></default>
+    <type>mixed</type>
+</argument>
+
+            <argument line="76" by_reference="false">
+    <name>request</name>
+    <default></default>
+    <type>\Symfony\Component\HttpFoundation\Request</type>
+</argument>
+
+            <argument line="76" by_reference="false">
+    <name>table</name>
+    <default>&quot;&quot;</default>
+    <type>mixed</type>
+</argument>
+
+        <docblock line="76">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller" line="89" visibility="public" returnByReference="false">
+    <name>showOne</name>
+    <full_name>\App\Controller\PlaylistsController::showOne()</full_name>
+    <value></value>
+                <argument line="89" by_reference="false">
+    <name>id</name>
+    <default></default>
+    <type>mixed</type>
+</argument>
+
+        <docblock line="89">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Controller/SecurityController.php" hash="24963678c31dae9a4ecd3c8a753ee003">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Controller"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Controller" line="14">
+                    <name>SecurityController</name>
+                    <full_name>\App\Controller\SecurityController</full_name>
+                    <docblock line="14">
+    <description>Contrôleur de gestion de l&#039;authentification</description>
+    <long-description></long-description>
+                    <tag
+                name="author"
+                description="Jomaa Lilia"
+                                                                                                />
+                            <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                                            <extends>\Symfony\Bundle\FrameworkBundle\Controller\AbstractController</extends> 
+                    
+                                        
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller" line="19" visibility="public" returnByReference="false">
+    <name>login</name>
+    <full_name>\App\Controller\SecurityController::login()</full_name>
+    <value></value>
+                <argument line="19" by_reference="false">
+    <name>authenticationUtils</name>
+    <default></default>
+    <type>\Symfony\Component\Security\Http\Authentication\AuthenticationUtils</type>
+</argument>
+
+        <docblock line="19">
+    <description>Affiche le formulaire de connexion et gère les erreurs d&#039;authentification</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Controller" line="33" visibility="public" returnByReference="false">
+    <name>logout</name>
+    <full_name>\App\Controller\SecurityController::logout()</full_name>
+    <value></value>
+            <docblock line="33">
+    <description>Déconnecte l&#039;utilisateur (interceptée par le firewall Symfony)</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/DataFixtures/AppFixtures.php" hash="7bb8a78cfd7a3e03e7822e9cce9505bb">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\DataFixtures"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\DataFixtures" line="8">
+                    <name>AppFixtures</name>
+                    <full_name>\App\DataFixtures\AppFixtures</full_name>
+                    <docblock line="8">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                                            <extends>\Doctrine\Bundle\FixturesBundle\Fixture</extends> 
+                    
+                                        
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\DataFixtures" line="10" visibility="public" returnByReference="false">
+    <name>load</name>
+    <full_name>\App\DataFixtures\AppFixtures::load()</full_name>
+    <value></value>
+                <argument line="10" by_reference="false">
+    <name>manager</name>
+    <default></default>
+    <type>\Doctrine\Persistence\ObjectManager</type>
+</argument>
+
+        <docblock line="10">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Entity/Categorie.php" hash="20d21cd32fd7dd25baf4e903f1c9adf8">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Entity"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Entity" line="14">
+                    <name>Categorie</name>
+                    <full_name>\App\Entity\Categorie</full_name>
+                    <docblock line="14">
+    <description>Entité représentant une catégorie de formation
+Jomaa Lilia</description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                    
+                    
+                                        
+                                            <property namespace="\App\Entity\Categorie" line="17" visibility="private">
+    <name>id</name>
+    <full_name>\App\Entity\Categorie::$id</full_name>
+    <default>null</default>
+        <docblock line="17">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</property>
+
+                                            <property namespace="\App\Entity\Categorie" line="22" visibility="private">
+    <name>name</name>
+    <full_name>\App\Entity\Categorie::$name</full_name>
+    <default>null</default>
+        <docblock line="22">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</property>
+
+                                            <property namespace="\App\Entity\Categorie" line="28" visibility="private">
+    <name>formations</name>
+    <full_name>\App\Entity\Categorie::$formations</full_name>
+    <default></default>
+        <docblock line="28">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="var"
+                description=""
+                                                                                                 type="\Doctrine\Common\Collections\Collection&lt;int,\App\Entity\Formation&gt;"/>
+                        </docblock>
+
+</property>
+
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="31" visibility="public" returnByReference="false">
+    <name>__construct</name>
+    <full_name>\App\Entity\Categorie::__construct()</full_name>
+    <value></value>
+            <docblock line="31">
+    <description></description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="39" visibility="public" returnByReference="false">
+    <name>getId</name>
+    <full_name>\App\Entity\Categorie::getId()</full_name>
+    <value></value>
+            <docblock line="39">
+    <description>Retourne l&#039;identifiant de la catégorie</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="47" visibility="public" returnByReference="false">
+    <name>getName</name>
+    <full_name>\App\Entity\Categorie::getName()</full_name>
+    <value></value>
+            <docblock line="47">
+    <description>Retourne le nom de la catégorie</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="55" visibility="public" returnByReference="false">
+    <name>setName</name>
+    <full_name>\App\Entity\Categorie::setName()</full_name>
+    <value></value>
+                <argument line="55" by_reference="false">
+    <name>name</name>
+    <default></default>
+    <type>?string</type>
+</argument>
+
+        <docblock line="55">
+    <description>Définit le nom de la catégorie</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="66" visibility="public" returnByReference="false">
+    <name>getFormations</name>
+    <full_name>\App\Entity\Categorie::getFormations()</full_name>
+    <value></value>
+            <docblock line="66">
+    <description>Retourne la liste des formations rattachées à la catégorie</description>
+    <long-description></long-description>
+                    <tag
+                name="return"
+                description=""
+                                                                                                 type="\Doctrine\Common\Collections\Collection&lt;int,\App\Entity\Formation&gt;"/>
+                        </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="74" visibility="public" returnByReference="false">
+    <name>addFormation</name>
+    <full_name>\App\Entity\Categorie::addFormation()</full_name>
+    <value></value>
+                <argument line="74" by_reference="false">
+    <name>formation</name>
+    <default></default>
+    <type>\App\Entity\Formation</type>
+</argument>
+
+        <docblock line="74">
+    <description>Ajoute une formation à la catégorie</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="86" visibility="public" returnByReference="false">
+    <name>removeFormation</name>
+    <full_name>\App\Entity\Categorie::removeFormation()</full_name>
+    <value></value>
+                <argument line="86" by_reference="false">
+    <name>formation</name>
+    <default></default>
+    <type>\App\Entity\Formation</type>
+</argument>
+
+        <docblock line="86">
+    <description>Retire une formation de la catégorie</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Entity/Formation.php" hash="ef0cdfc510d8b58e8ccb2f196bf13af5">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Entity"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Entity" line="16">
+                    <name>Formation</name>
+                    <full_name>\App\Entity\Formation</full_name>
+                    <docblock line="16">
+    <description>Entité représentant une formation en ligne
+Jomaa Lilia</description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                    
+                    
+                                            <constant namespace="\App\Entity\Formation" line="22" visibility="private">
+    <name>cheminImage</name>
+    <full_name>\App\Entity\Formation::cheminImage</full_name>
+    <value>&quot;https://i.ytimg.com/vi/&quot;</value>
+        <docblock line="22">
+    <description>Début de chemin vers les images YouTube</description>
+    <long-description></long-description>
+                            </docblock>
+
+</constant>
+
+                                        
+                                            <property namespace="\App\Entity\Formation" line="24" visibility="private">
+    <name>id</name>
+    <full_name>\App\Entity\Formation::$id</full_name>
+    <default>null</default>
+        <docblock line="24">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</property>
+
+                                            <property namespace="\App\Entity\Formation" line="29" visibility="private">
+    <name>publishedAt</name>
+    <full_name>\App\Entity\Formation::$publishedAt</full_name>
+    <default>null</default>
+        <docblock line="29">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</property>
+
+                                            <property namespace="\App\Entity\Formation" line="36" visibility="private">
+    <name>title</name>
+    <full_name>\App\Entity\Formation::$title</full_name>
+    <default>null</default>
+        <docblock line="36">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</property>
+
+                                            <property namespace="\App\Entity\Formation" line="39" visibility="private">
+    <name>description</name>
+    <full_name>\App\Entity\Formation::$description</full_name>
+    <default>null</default>
+        <docblock line="39">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</property>
+
+                                            <property namespace="\App\Entity\Formation" line="42" visibility="private">
+    <name>videoId</name>
+    <full_name>\App\Entity\Formation::$videoId</full_name>
+    <default>null</default>
+        <docblock line="42">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</property>
+
+                                            <property namespace="\App\Entity\Formation" line="45" visibility="private">
+    <name>playlist</name>
+    <full_name>\App\Entity\Formation::$playlist</full_name>
+    <default>null</default>
+        <docblock line="45">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</property>
+
+                                            <property namespace="\App\Entity\Formation" line="51" visibility="private">
+    <name>categories</name>
+    <full_name>\App\Entity\Formation::$categories</full_name>
+    <default></default>
+        <docblock line="51">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="var"
+                description=""
+                                                                                                 type="\Doctrine\Common\Collections\Collection&lt;int,\App\Entity\Categorie&gt;"/>
+                        </docblock>
+
+</property>
+
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="54" visibility="public" returnByReference="false">
+    <name>__construct</name>
+    <full_name>\App\Entity\Formation::__construct()</full_name>
+    <value></value>
+            <docblock line="54">
+    <description></description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="62" visibility="public" returnByReference="false">
+    <name>getId</name>
+    <full_name>\App\Entity\Formation::getId()</full_name>
+    <value></value>
+            <docblock line="62">
+    <description>Retourne l&#039;identifiant de la formation</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="70" visibility="public" returnByReference="false">
+    <name>getPublishedAt</name>
+    <full_name>\App\Entity\Formation::getPublishedAt()</full_name>
+    <value></value>
+            <docblock line="70">
+    <description>Retourne la date de publication</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="78" visibility="public" returnByReference="false">
+    <name>setPublishedAt</name>
+    <full_name>\App\Entity\Formation::setPublishedAt()</full_name>
+    <value></value>
+                <argument line="78" by_reference="false">
+    <name>publishedAt</name>
+    <default></default>
+    <type>?\DateTimeInterface</type>
+</argument>
+
+        <docblock line="78">
+    <description>Définit la date de publication</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="88" visibility="public" returnByReference="false">
+    <name>getPublishedAtString</name>
+    <full_name>\App\Entity\Formation::getPublishedAtString()</full_name>
+    <value></value>
+            <docblock line="88">
+    <description>Retourne la date de publication formatée en chaîne (dd/mm/yyyy)
+Retourne une chaîne vide si la date est nulle</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="99" visibility="public" returnByReference="false">
+    <name>getTitle</name>
+    <full_name>\App\Entity\Formation::getTitle()</full_name>
+    <value></value>
+            <docblock line="99">
+    <description>Retourne le titre de la formation</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="107" visibility="public" returnByReference="false">
+    <name>setTitle</name>
+    <full_name>\App\Entity\Formation::setTitle()</full_name>
+    <value></value>
+                <argument line="107" by_reference="false">
+    <name>title</name>
+    <default></default>
+    <type>?string</type>
+</argument>
+
+        <docblock line="107">
+    <description>Définit le titre de la formation</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="116" visibility="public" returnByReference="false">
+    <name>getDescription</name>
+    <full_name>\App\Entity\Formation::getDescription()</full_name>
+    <value></value>
+            <docblock line="116">
+    <description>Retourne la description de la formation</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="124" visibility="public" returnByReference="false">
+    <name>setDescription</name>
+    <full_name>\App\Entity\Formation::setDescription()</full_name>
+    <value></value>
+                <argument line="124" by_reference="false">
+    <name>description</name>
+    <default></default>
+    <type>?string</type>
+</argument>
+
+        <docblock line="124">
+    <description>Définit la description de la formation</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="133" visibility="public" returnByReference="false">
+    <name>getVideoId</name>
+    <full_name>\App\Entity\Formation::getVideoId()</full_name>
+    <value></value>
+            <docblock line="133">
+    <description>Retourne l&#039;identifiant de la vidéo YouTube</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="141" visibility="public" returnByReference="false">
+    <name>setVideoId</name>
+    <full_name>\App\Entity\Formation::setVideoId()</full_name>
+    <value></value>
+                <argument line="141" by_reference="false">
+    <name>videoId</name>
+    <default></default>
+    <type>?string</type>
+</argument>
+
+        <docblock line="141">
+    <description>Définit l&#039;identifiant de la vidéo YouTube</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="150" visibility="public" returnByReference="false">
+    <name>getMiniature</name>
+    <full_name>\App\Entity\Formation::getMiniature()</full_name>
+    <value></value>
+            <docblock line="150">
+    <description>Retourne l&#039;URL de la miniature de la vidéo YouTube</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="158" visibility="public" returnByReference="false">
+    <name>getPicture</name>
+    <full_name>\App\Entity\Formation::getPicture()</full_name>
+    <value></value>
+            <docblock line="158">
+    <description>Retourne l&#039;URL de l&#039;image haute qualité de la vidéo YouTube</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="166" visibility="public" returnByReference="false">
+    <name>getPlaylist</name>
+    <full_name>\App\Entity\Formation::getPlaylist()</full_name>
+    <value></value>
+            <docblock line="166">
+    <description>Retourne la playlist associée à la formation</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="174" visibility="public" returnByReference="false">
+    <name>setPlaylist</name>
+    <full_name>\App\Entity\Formation::setPlaylist()</full_name>
+    <value></value>
+                <argument line="174" by_reference="false">
+    <name>playlist</name>
+    <default></default>
+    <type>?\App\Entity\Playlist</type>
+</argument>
+
+        <docblock line="174">
+    <description>Définit la playlist associée à la formation</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="185" visibility="public" returnByReference="false">
+    <name>getCategories</name>
+    <full_name>\App\Entity\Formation::getCategories()</full_name>
+    <value></value>
+            <docblock line="185">
+    <description>Retourne la liste des catégories de la formation</description>
+    <long-description></long-description>
+                    <tag
+                name="return"
+                description=""
+                                                                                                 type="\Doctrine\Common\Collections\Collection&lt;int,\App\Entity\Categorie&gt;"/>
+                        </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="193" visibility="public" returnByReference="false">
+    <name>addCategory</name>
+    <full_name>\App\Entity\Formation::addCategory()</full_name>
+    <value></value>
+                <argument line="193" by_reference="false">
+    <name>category</name>
+    <default></default>
+    <type>\App\Entity\Categorie</type>
+</argument>
+
+        <docblock line="193">
+    <description>Ajoute une catégorie à la formation</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="204" visibility="public" returnByReference="false">
+    <name>removeCategory</name>
+    <full_name>\App\Entity\Formation::removeCategory()</full_name>
+    <value></value>
+                <argument line="204" by_reference="false">
+    <name>category</name>
+    <default></default>
+    <type>\App\Entity\Categorie</type>
+</argument>
+
+        <docblock line="204">
+    <description>Retire une catégorie de la formation</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Entity/Playlist.php" hash="0d831ae51f8617c7d74c6fff6759ca0d">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Entity"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Entity" line="15">
+                    <name>Playlist</name>
+                    <full_name>\App\Entity\Playlist</full_name>
+                    <docblock line="15">
+    <description>Entité représentant une playlist de formations
+Jomaa Lilia</description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                    
+                    
+                                        
+                                            <property namespace="\App\Entity\Playlist" line="18" visibility="private">
+    <name>id</name>
+    <full_name>\App\Entity\Playlist::$id</full_name>
+    <default>null</default>
+        <docblock line="18">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</property>
+
+                                            <property namespace="\App\Entity\Playlist" line="23" visibility="private">
+    <name>name</name>
+    <full_name>\App\Entity\Playlist::$name</full_name>
+    <default>null</default>
+        <docblock line="23">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</property>
+
+                                            <property namespace="\App\Entity\Playlist" line="26" visibility="private">
+    <name>description</name>
+    <full_name>\App\Entity\Playlist::$description</full_name>
+    <default>null</default>
+        <docblock line="26">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</property>
+
+                                            <property namespace="\App\Entity\Playlist" line="32" visibility="private">
+    <name>formations</name>
+    <full_name>\App\Entity\Playlist::$formations</full_name>
+    <default></default>
+        <docblock line="32">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="var"
+                description=""
+                                                                                                 type="\Doctrine\Common\Collections\Collection&lt;int,\App\Entity\Formation&gt;"/>
+                        </docblock>
+
+</property>
+
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="35" visibility="public" returnByReference="false">
+    <name>__construct</name>
+    <full_name>\App\Entity\Playlist::__construct()</full_name>
+    <value></value>
+            <docblock line="35">
+    <description></description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="43" visibility="public" returnByReference="false">
+    <name>getId</name>
+    <full_name>\App\Entity\Playlist::getId()</full_name>
+    <value></value>
+            <docblock line="43">
+    <description>Retourne l&#039;identifiant de la playlist</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="51" visibility="public" returnByReference="false">
+    <name>getName</name>
+    <full_name>\App\Entity\Playlist::getName()</full_name>
+    <value></value>
+            <docblock line="51">
+    <description>Retourne le nom de la playlist</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="59" visibility="public" returnByReference="false">
+    <name>setName</name>
+    <full_name>\App\Entity\Playlist::setName()</full_name>
+    <value></value>
+                <argument line="59" by_reference="false">
+    <name>name</name>
+    <default></default>
+    <type>?string</type>
+</argument>
+
+        <docblock line="59">
+    <description>Définit le nom de la playlist</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="68" visibility="public" returnByReference="false">
+    <name>getDescription</name>
+    <full_name>\App\Entity\Playlist::getDescription()</full_name>
+    <value></value>
+            <docblock line="68">
+    <description>Retourne la description de la playlist</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="76" visibility="public" returnByReference="false">
+    <name>setDescription</name>
+    <full_name>\App\Entity\Playlist::setDescription()</full_name>
+    <value></value>
+                <argument line="76" by_reference="false">
+    <name>description</name>
+    <default></default>
+    <type>?string</type>
+</argument>
+
+        <docblock line="76">
+    <description>Définit la description de la playlist</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="87" visibility="public" returnByReference="false">
+    <name>getFormations</name>
+    <full_name>\App\Entity\Playlist::getFormations()</full_name>
+    <value></value>
+            <docblock line="87">
+    <description>Retourne la liste des formations de la playlist</description>
+    <long-description></long-description>
+                    <tag
+                name="return"
+                description=""
+                                                                                                 type="\Doctrine\Common\Collections\Collection&lt;int,\App\Entity\Formation&gt;"/>
+                        </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="95" visibility="public" returnByReference="false">
+    <name>addFormation</name>
+    <full_name>\App\Entity\Playlist::addFormation()</full_name>
+    <value></value>
+                <argument line="95" by_reference="false">
+    <name>formation</name>
+    <default></default>
+    <type>\App\Entity\Formation</type>
+</argument>
+
+        <docblock line="95">
+    <description>Ajoute une formation à la playlist</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="107" visibility="public" returnByReference="false">
+    <name>removeFormation</name>
+    <full_name>\App\Entity\Playlist::removeFormation()</full_name>
+    <value></value>
+                <argument line="107" by_reference="false">
+    <name>formation</name>
+    <default></default>
+    <type>\App\Entity\Formation</type>
+</argument>
+
+        <docblock line="107">
+    <description>Retire une formation de la playlist</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="122" visibility="public" returnByReference="false">
+    <name>getCategoriesPlaylist</name>
+    <full_name>\App\Entity\Playlist::getCategoriesPlaylist()</full_name>
+    <value></value>
+            <docblock line="122">
+    <description>Retourne la liste des noms de catégories associées aux formations de la playlist</description>
+    <long-description></long-description>
+                    <tag
+                name="return"
+                description=""
+                                                                                                 type="\Doctrine\Common\Collections\Collection&lt;int,string&gt;"/>
+                        </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Entity/User.php" hash="17520c5bfa25b1c184c96285dfa1a264">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Entity"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Entity" line="14">
+                    <name>User</name>
+                    <full_name>\App\Entity\User</full_name>
+                    <docblock line="14">
+    <description>Entité représentant un administrateur de l&#039;application
+Jomaa Lilia</description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                    
+                                            <implements>\Symfony\Component\Security\Core\User\UserInterface</implements>
+                                            <implements>\Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface</implements>
+                    
+                                        
+                                            <property namespace="\App\Entity\User" line="18" visibility="private">
+    <name>id</name>
+    <full_name>\App\Entity\User::$id</full_name>
+    <default>null</default>
+        <docblock line="18">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</property>
+
+                                            <property namespace="\App\Entity\User" line="23" visibility="private">
+    <name>email</name>
+    <full_name>\App\Entity\User::$email</full_name>
+    <default>null</default>
+        <docblock line="23">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</property>
+
+                                            <property namespace="\App\Entity\User" line="29" visibility="private">
+    <name>roles</name>
+    <full_name>\App\Entity\User::$roles</full_name>
+    <default>[]</default>
+        <docblock line="29">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="var"
+                description="The user roles"
+                                                                                                 type="list&lt;string&gt;"/>
+                        </docblock>
+
+</property>
+
+                                            <property namespace="\App\Entity\User" line="35" visibility="private">
+    <name>password</name>
+    <full_name>\App\Entity\User::$password</full_name>
+    <default>null</default>
+        <docblock line="35">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="var"
+                description="The hashed password"
+                                                                                                 type="string"/>
+                        </docblock>
+
+</property>
+
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="41" visibility="public" returnByReference="false">
+    <name>getId</name>
+    <full_name>\App\Entity\User::getId()</full_name>
+    <value></value>
+            <docblock line="41">
+    <description>Retourne l&#039;identifiant de l&#039;utilisateur</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="49" visibility="public" returnByReference="false">
+    <name>getEmail</name>
+    <full_name>\App\Entity\User::getEmail()</full_name>
+    <value></value>
+            <docblock line="49">
+    <description>Retourne l&#039;email de l&#039;utilisateur</description>
+    <long-description></long-description>
+                </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="57" visibility="public" returnByReference="false">
+    <name>setEmail</name>
+    <full_name>\App\Entity\User::setEmail()</full_name>
+    <value></value>
+                <argument line="57" by_reference="false">
+    <name>email</name>
+    <default></default>
+    <type>string</type>
+</argument>
+
+        <docblock line="57">
+    <description>Définit l&#039;email de l&#039;utilisateur</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="68" visibility="public" returnByReference="false">
+    <name>getUserIdentifier</name>
+    <full_name>\App\Entity\User::getUserIdentifier()</full_name>
+    <value></value>
+            <docblock line="68">
+    <description>Retourne l&#039;identifiant visuel de l&#039;utilisateur (email)</description>
+    <long-description></long-description>
+                    <tag
+                name="see"
+                description=""
+                                                 link="\Symfony\Component\Security\Core\User\UserInterface"                                                />
+                        </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="79" visibility="public" returnByReference="false">
+    <name>getRoles</name>
+    <full_name>\App\Entity\User::getRoles()</full_name>
+    <value></value>
+            <docblock line="79">
+    <description>Retourne les rôles de l&#039;utilisateur</description>
+    <long-description></long-description>
+                    <tag
+                name="see"
+                description=""
+                                                 link="\Symfony\Component\Security\Core\User\UserInterface"                                                />
+                            <tag
+                name="return"
+                description=""
+                                                                                                 type="list&lt;string&gt;"/>
+                        </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="91" visibility="public" returnByReference="false">
+    <name>setRoles</name>
+    <full_name>\App\Entity\User::setRoles()</full_name>
+    <value></value>
+                <argument line="91" by_reference="false">
+    <name>roles</name>
+    <default></default>
+    <type>list&lt;string&gt;</type>
+</argument>
+
+        <docblock line="91">
+    <description>Définit les rôles de l&#039;utilisateur</description>
+    <long-description></long-description>
+                    <tag
+                name="param"
+                description=""
+                                                                 variable="roles"                                 type="list&lt;string&gt;"/>
+                        </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="102" visibility="public" returnByReference="false">
+    <name>getPassword</name>
+    <full_name>\App\Entity\User::getPassword()</full_name>
+    <value></value>
+            <docblock line="102">
+    <description>Retourne le mot de passe haché de l&#039;utilisateur</description>
+    <long-description></long-description>
+                    <tag
+                name="see"
+                description=""
+                                                 link="\Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface"                                                />
+                        </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="110" visibility="public" returnByReference="false">
+    <name>setPassword</name>
+    <full_name>\App\Entity\User::setPassword()</full_name>
+    <value></value>
+                <argument line="110" by_reference="false">
+    <name>password</name>
+    <default></default>
+    <type>string</type>
+</argument>
+
+        <docblock line="110">
+    <description>Définit le mot de passe haché de l&#039;utilisateur</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Entity" line="121" visibility="public" returnByReference="false">
+    <name>eraseCredentials</name>
+    <full_name>\App\Entity\User::eraseCredentials()</full_name>
+    <value></value>
+            <docblock line="121">
+    <description>Efface les données sensibles temporaires de l&#039;utilisateur</description>
+    <long-description></long-description>
+                    <tag
+                name="see"
+                description=""
+                                                 link="\Symfony\Component\Security\Core\User\UserInterface"                                                />
+                        </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Form/FormationFormType.php" hash="3adedcb16e787565a7bfee05f6e0de84">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Form"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Form" line="21">
+                    <name>FormationFormType</name>
+                    <full_name>\App\Form\FormationFormType</full_name>
+                    <docblock line="21">
+    <description>Formulaire d&#039;ajout et de modification d&#039;une formation
+Jomaa Lilia</description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                                            <extends>\Symfony\Component\Form\AbstractType</extends> 
+                    
+                                        
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Form" line="27" visibility="public" returnByReference="false">
+    <name>buildForm</name>
+    <full_name>\App\Form\FormationFormType::buildForm()</full_name>
+    <value></value>
+                <argument line="27" by_reference="false">
+    <name>builder</name>
+    <default></default>
+    <type>\Symfony\Component\Form\FormBuilderInterface</type>
+</argument>
+
+            <argument line="27" by_reference="false">
+    <name>options</name>
+    <default></default>
+    <type>array</type>
+</argument>
+
+        <docblock line="27">
+    <description>Construit le formulaire avec les champs titre, description, videoId,
+date de publication, playlist et catégories</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Form" line="73" visibility="public" returnByReference="false">
+    <name>configureOptions</name>
+    <full_name>\App\Form\FormationFormType::configureOptions()</full_name>
+    <value></value>
+                <argument line="73" by_reference="false">
+    <name>resolver</name>
+    <default></default>
+    <type>\Symfony\Component\OptionsResolver\OptionsResolver</type>
+</argument>
+
+        <docblock line="73">
+    <description>Configure les options du formulaire en associant l&#039;entité Formation</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Form/PlaylistFormType.php" hash="924bb24424f5d5957a049b65a54fc44a">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Form"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Form" line="17">
+                    <name>PlaylistFormType</name>
+                    <full_name>\App\Form\PlaylistFormType</full_name>
+                    <docblock line="17">
+    <description>Formulaire d&#039;ajout et de modification d&#039;une playlist
+Jomaa Lilia</description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                                            <extends>\Symfony\Component\Form\AbstractType</extends> 
+                    
+                                        
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Form" line="22" visibility="public" returnByReference="false">
+    <name>buildForm</name>
+    <full_name>\App\Form\PlaylistFormType::buildForm()</full_name>
+    <value></value>
+                <argument line="22" by_reference="false">
+    <name>builder</name>
+    <default></default>
+    <type>\Symfony\Component\Form\FormBuilderInterface</type>
+</argument>
+
+            <argument line="22" by_reference="false">
+    <name>options</name>
+    <default></default>
+    <type>array</type>
+</argument>
+
+        <docblock line="22">
+    <description>Construit le formulaire avec les champs nom (obligatoire) et description (facultative)</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Form" line="41" visibility="public" returnByReference="false">
+    <name>configureOptions</name>
+    <full_name>\App\Form\PlaylistFormType::configureOptions()</full_name>
+    <value></value>
+                <argument line="41" by_reference="false">
+    <name>resolver</name>
+    <default></default>
+    <type>\Symfony\Component\OptionsResolver\OptionsResolver</type>
+</argument>
+
+        <docblock line="41">
+    <description>Configure les options du formulaire en associant l&#039;entité Playlist</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Kernel.php" hash="065c02fc2d62bfff3cd16f3a0b46d9ee">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App" line="8">
+                    <name>Kernel</name>
+                    <full_name>\App\Kernel</full_name>
+                    <docblock line="8">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                                            <extends>\Symfony\Component\HttpKernel\Kernel</extends> 
+                    
+                                        
+                                        
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Repository/CategorieRepository.php" hash="2c16ee8611b2186267cecfd5227bc7de">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Repository"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Repository" line="12">
+                    <name>CategorieRepository</name>
+                    <full_name>\App\Repository\CategorieRepository</full_name>
+                    <docblock line="12">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="extends"
+                description="ServiceEntityRepository&lt;Categorie&gt;"
+                                                                                                />
+                            <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                                            <extends>\Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository</extends> 
+                    
+                                        
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="14" visibility="public" returnByReference="false">
+    <name>__construct</name>
+    <full_name>\App\Repository\CategorieRepository::__construct()</full_name>
+    <value></value>
+                <argument line="14" by_reference="false">
+    <name>registry</name>
+    <default></default>
+    <type>\Doctrine\Persistence\ManagerRegistry</type>
+</argument>
+
+        <docblock line="14">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="19" visibility="public" returnByReference="false">
+    <name>add</name>
+    <full_name>\App\Repository\CategorieRepository::add()</full_name>
+    <value></value>
+                <argument line="19" by_reference="false">
+    <name>entity</name>
+    <default></default>
+    <type>\App\Entity\Categorie</type>
+</argument>
+
+        <docblock line="19">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="25" visibility="public" returnByReference="false">
+    <name>remove</name>
+    <full_name>\App\Repository\CategorieRepository::remove()</full_name>
+    <value></value>
+                <argument line="25" by_reference="false">
+    <name>entity</name>
+    <default></default>
+    <type>\App\Entity\Categorie</type>
+</argument>
+
+        <docblock line="25">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="36" visibility="public" returnByReference="false">
+    <name>findAllForOnePlaylist</name>
+    <full_name>\App\Repository\CategorieRepository::findAllForOnePlaylist()</full_name>
+    <value></value>
+                <argument line="36" by_reference="false">
+    <name>idPlaylist</name>
+    <default></default>
+    <type>\App\Repository\type</type>
+</argument>
+
+        <docblock line="36">
+    <description>Retourne la liste des catégories des formations d&#039;une playlist</description>
+    <long-description></long-description>
+                    <tag
+                name="param"
+                description=""
+                                                                 variable="idPlaylist"                                 type="\App\Repository\type"/>
+                            <tag
+                name="return"
+                description=""
+                                                                                                 type="array"/>
+                        </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Repository/FormationRepository.php" hash="623640119a4630cc0deb5f60d86b1dda">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Repository"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Repository" line="12">
+                    <name>FormationRepository</name>
+                    <full_name>\App\Repository\FormationRepository</full_name>
+                    <docblock line="12">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="extends"
+                description="ServiceEntityRepository&lt;Formation&gt;"
+                                                                                                />
+                            <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                                            <extends>\Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository</extends> 
+                    
+                                        
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="14" visibility="public" returnByReference="false">
+    <name>__construct</name>
+    <full_name>\App\Repository\FormationRepository::__construct()</full_name>
+    <value></value>
+                <argument line="14" by_reference="false">
+    <name>registry</name>
+    <default></default>
+    <type>\Doctrine\Persistence\ManagerRegistry</type>
+</argument>
+
+        <docblock line="14">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="19" visibility="public" returnByReference="false">
+    <name>add</name>
+    <full_name>\App\Repository\FormationRepository::add()</full_name>
+    <value></value>
+                <argument line="19" by_reference="false">
+    <name>entity</name>
+    <default></default>
+    <type>\App\Entity\Formation</type>
+</argument>
+
+        <docblock line="19">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="25" visibility="public" returnByReference="false">
+    <name>remove</name>
+    <full_name>\App\Repository\FormationRepository::remove()</full_name>
+    <value></value>
+                <argument line="25" by_reference="false">
+    <name>entity</name>
+    <default></default>
+    <type>\App\Entity\Formation</type>
+</argument>
+
+        <docblock line="25">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="38" visibility="public" returnByReference="false">
+    <name>findAllOrderBy</name>
+    <full_name>\App\Repository\FormationRepository::findAllOrderBy()</full_name>
+    <value></value>
+                <argument line="38" by_reference="false">
+    <name>champ</name>
+    <default></default>
+    <type>\App\Repository\type</type>
+</argument>
+
+            <argument line="38" by_reference="false">
+    <name>ordre</name>
+    <default></default>
+    <type>\App\Repository\type</type>
+</argument>
+
+            <argument line="38" by_reference="false">
+    <name>table</name>
+    <default>&quot;&quot;</default>
+    <type>\App\Repository\type</type>
+</argument>
+
+        <docblock line="38">
+    <description>Retourne toutes les formations triées sur un champ</description>
+    <long-description></long-description>
+                    <tag
+                name="param"
+                description=""
+                                                                 variable="champ"                                 type="\App\Repository\type"/>
+                <tag
+                name="param"
+                description=""
+                                                                 variable="ordre"                                 type="\App\Repository\type"/>
+                <tag
+                name="param"
+                description="si $champ dans une autre table"
+                                                                 variable="table"                                 type="\App\Repository\type"/>
+                            <tag
+                name="return"
+                description=""
+                                                                                                 type="\App\Entity\Formation[]"/>
+                        </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="61" visibility="public" returnByReference="false">
+    <name>findByContainValue</name>
+    <full_name>\App\Repository\FormationRepository::findByContainValue()</full_name>
+    <value></value>
+                <argument line="61" by_reference="false">
+    <name>champ</name>
+    <default></default>
+    <type>\App\Repository\type</type>
+</argument>
+
+            <argument line="61" by_reference="false">
+    <name>valeur</name>
+    <default></default>
+    <type>\App\Repository\type</type>
+</argument>
+
+            <argument line="61" by_reference="false">
+    <name>table</name>
+    <default>&quot;&quot;</default>
+    <type>\App\Repository\type</type>
+</argument>
+
+        <docblock line="61">
+    <description>Enregistrements dont un champ contient une valeur
+ou tous les enregistrements si la valeur est vide</description>
+    <long-description></long-description>
+                    <tag
+                name="param"
+                description=""
+                                                                 variable="champ"                                 type="\App\Repository\type"/>
+                <tag
+                name="param"
+                description=""
+                                                                 variable="valeur"                                 type="\App\Repository\type"/>
+                <tag
+                name="param"
+                description="si $champ dans une autre table"
+                                                                 variable="table"                                 type="\App\Repository\type"/>
+                            <tag
+                name="return"
+                description=""
+                                                                                                 type="\App\Entity\Formation[]"/>
+                        </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="88" visibility="public" returnByReference="false">
+    <name>findAllLasted</name>
+    <full_name>\App\Repository\FormationRepository::findAllLasted()</full_name>
+    <value></value>
+                <argument line="88" by_reference="false">
+    <name>nb</name>
+    <default></default>
+    <type>\App\Repository\type</type>
+</argument>
+
+        <docblock line="88">
+    <description>Retourne les n formations les plus récentes</description>
+    <long-description></long-description>
+                    <tag
+                name="param"
+                description=""
+                                                                 variable="nb"                                 type="\App\Repository\type"/>
+                            <tag
+                name="return"
+                description=""
+                                                                                                 type="\App\Entity\Formation[]"/>
+                        </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="101" visibility="public" returnByReference="false">
+    <name>findAllForOnePlaylist</name>
+    <full_name>\App\Repository\FormationRepository::findAllForOnePlaylist()</full_name>
+    <value></value>
+                <argument line="101" by_reference="false">
+    <name>idPlaylist</name>
+    <default></default>
+    <type>\App\Repository\type</type>
+</argument>
+
+        <docblock line="101">
+    <description>Retourne la liste des formations d&#039;une playlist</description>
+    <long-description></long-description>
+                    <tag
+                name="param"
+                description=""
+                                                                 variable="idPlaylist"                                 type="\App\Repository\type"/>
+                            <tag
+                name="return"
+                description=""
+                                                                                                 type="array"/>
+                        </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Repository/PlaylistRepository.php" hash="89f92066af1631511f55222480da6fb8">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Repository"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Repository" line="12">
+                    <name>PlaylistRepository</name>
+                    <full_name>\App\Repository\PlaylistRepository</full_name>
+                    <docblock line="12">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="extends"
+                description="ServiceEntityRepository&lt;Playlist&gt;"
+                                                                                                />
+                            <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                                            <extends>\Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository</extends> 
+                    
+                                        
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="14" visibility="public" returnByReference="false">
+    <name>__construct</name>
+    <full_name>\App\Repository\PlaylistRepository::__construct()</full_name>
+    <value></value>
+                <argument line="14" by_reference="false">
+    <name>registry</name>
+    <default></default>
+    <type>\Doctrine\Persistence\ManagerRegistry</type>
+</argument>
+
+        <docblock line="14">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="19" visibility="public" returnByReference="false">
+    <name>add</name>
+    <full_name>\App\Repository\PlaylistRepository::add()</full_name>
+    <value></value>
+                <argument line="19" by_reference="false">
+    <name>entity</name>
+    <default></default>
+    <type>\App\Entity\Playlist</type>
+</argument>
+
+        <docblock line="19">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="25" visibility="public" returnByReference="false">
+    <name>remove</name>
+    <full_name>\App\Repository\PlaylistRepository::remove()</full_name>
+    <value></value>
+                <argument line="25" by_reference="false">
+    <name>entity</name>
+    <default></default>
+    <type>\App\Entity\Playlist</type>
+</argument>
+
+        <docblock line="25">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="37" visibility="public" returnByReference="false">
+    <name>findAllOrderByName</name>
+    <full_name>\App\Repository\PlaylistRepository::findAllOrderByName()</full_name>
+    <value></value>
+                <argument line="37" by_reference="false">
+    <name>ordre</name>
+    <default></default>
+    <type>\App\Repository\type</type>
+</argument>
+
+        <docblock line="37">
+    <description>Retourne toutes les playlists triées sur le nom de la playlist</description>
+    <long-description></long-description>
+                    <tag
+                name="param"
+                description=""
+                                                                 variable="champ"                                 type="\App\Repository\type"/>
+                <tag
+                name="param"
+                description=""
+                                                                 variable="ordre"                                 type="\App\Repository\type"/>
+                            <tag
+                name="return"
+                description=""
+                                                                                                 type="\App\Entity\Playlist[]"/>
+                        </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="49" visibility="public" returnByReference="false">
+    <name>findAllOrderByNbFormations</name>
+    <full_name>\App\Repository\PlaylistRepository::findAllOrderByNbFormations()</full_name>
+    <value></value>
+                <argument line="49" by_reference="false">
+    <name>ordre</name>
+    <default></default>
+    <type>mixed</type>
+</argument>
+
+        <docblock line="49">
+    <description>Les playlists sont triés par nombre de formations</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="67" visibility="public" returnByReference="false">
+    <name>findByContainValue</name>
+    <full_name>\App\Repository\PlaylistRepository::findByContainValue()</full_name>
+    <value></value>
+                <argument line="67" by_reference="false">
+    <name>champ</name>
+    <default></default>
+    <type>\App\Repository\type</type>
+</argument>
+
+            <argument line="67" by_reference="false">
+    <name>valeur</name>
+    <default></default>
+    <type>\App\Repository\type</type>
+</argument>
+
+            <argument line="67" by_reference="false">
+    <name>table</name>
+    <default>&quot;&quot;</default>
+    <type>\App\Repository\type</type>
+</argument>
+
+        <docblock line="67">
+    <description>Enregistrements dont un champ contient une valeur
+ou tous les enregistrements si la valeur est vide</description>
+    <long-description></long-description>
+                    <tag
+                name="param"
+                description=""
+                                                                 variable="champ"                                 type="\App\Repository\type"/>
+                <tag
+                name="param"
+                description=""
+                                                                 variable="valeur"                                 type="\App\Repository\type"/>
+                <tag
+                name="param"
+                description="si $champ dans une autre table"
+                                                                 variable="table"                                 type="\App\Repository\type"/>
+                            <tag
+                name="return"
+                description=""
+                                                                                                 type="\App\Entity\Playlist[]"/>
+                        </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+            <file path="src/Repository/UserRepository.php" hash="d60bb977f383ecb6e0c866acee506504">
+            <docblock line="0">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Application"
+                                                                                                />
+            </docblock>
+
+
+            
+                            <namespace-alias name="\App\Repository"/>
+            
+
+            
+                        
+                        
+                                        <class final="false" abstract="false" namespace="\App\Repository" line="15">
+                    <name>UserRepository</name>
+                    <full_name>\App\Repository\UserRepository</full_name>
+                    <docblock line="15">
+    <description></description>
+    <long-description></long-description>
+                    <tag
+                name="extends"
+                description="ServiceEntityRepository&lt;User&gt;"
+                                                                                                />
+                            <tag
+                name="package"
+                description="Application"
+                                                                                                />
+                        </docblock>
+
+                                            <extends>\Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository</extends> 
+                                            <implements>\Symfony\Component\Security\Core\User\PasswordUpgraderInterface</implements>
+                    
+                                        
+                                        
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="17" visibility="public" returnByReference="false">
+    <name>__construct</name>
+    <full_name>\App\Repository\UserRepository::__construct()</full_name>
+    <value></value>
+                <argument line="17" by_reference="false">
+    <name>registry</name>
+    <default></default>
+    <type>\Doctrine\Persistence\ManagerRegistry</type>
+</argument>
+
+        <docblock line="17">
+    <description></description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                            <method final="false" abstract="false" static="false" namespace="\App\Repository" line="25" visibility="public" returnByReference="false">
+    <name>upgradePassword</name>
+    <full_name>\App\Repository\UserRepository::upgradePassword()</full_name>
+    <value></value>
+                <argument line="25" by_reference="false">
+    <name>user</name>
+    <default></default>
+    <type>\Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface</type>
+</argument>
+
+            <argument line="25" by_reference="false">
+    <name>newHashedPassword</name>
+    <default></default>
+    <type>string</type>
+</argument>
+
+        <docblock line="25">
+    <description>Used to upgrade (rehash) the user&#039;s password automatically over time.</description>
+    <long-description></long-description>
+                            </docblock>
+
+</method>
+
+                                                                            </class>
+            
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+    
+            <namespace name="Controller" full_name="\App\Controller">
+            <namespace name="Admin" full_name="\App\Controller\Admin" />
+
+    </namespace>
+
+            <namespace name="Admin" full_name="\App\Controller\Admin" />
+
+            <namespace name="DataFixtures" full_name="\App\DataFixtures" />
+
+            <namespace name="Entity" full_name="\App\Entity" />
+
+            <namespace name="Form" full_name="\App\Form" />
+
+            <namespace name="App" full_name="\App">
+            <namespace name="Controller" full_name="\App\Controller">
+            <namespace name="Admin" full_name="\App\Controller\Admin" />
+
+    </namespace>
+
+            <namespace name="DataFixtures" full_name="\App\DataFixtures" />
+
+            <namespace name="Entity" full_name="\App\Entity" />
+
+            <namespace name="Form" full_name="\App\Form" />
+
+            <namespace name="Repository" full_name="\App\Repository" />
+
+    </namespace>
+
+            <namespace name="Repository" full_name="\App\Repository" />
+
+            <namespace name="\" full_name="\">
+            <namespace name="App" full_name="\App">
+            <namespace name="Controller" full_name="\App\Controller">
+            <namespace name="Admin" full_name="\App\Controller\Admin" />
+
+    </namespace>
+
+            <namespace name="DataFixtures" full_name="\App\DataFixtures" />
+
+            <namespace name="Entity" full_name="\App\Entity" />
+
+            <namespace name="Form" full_name="\App\Form" />
+
+            <namespace name="Repository" full_name="\App\Repository" />
+
+    </namespace>
+
+    </namespace>
+
+    </project>

@@ -1,0 +1,61 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Admin - Playlists{% endblock %}
+{% block stylesheets %}{% endblock %}
+
+{% block top %}
+    <div class="container">
+        <div class="text-left">
+            <img src="{{ app.request.getBasePath()~'/banniere.jpg' }}" alt="banniere du site Mediatek">
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ path('admin_formations') }}">Formations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('admin_playlists') }}">Playlists</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('admin_categories') }}">Catégories</a></li>
+                    <li class="nav-item"><a class="nav-link text-danger" href="{{ path('app_logout') }}">Déconnexion</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>Gestion des playlists</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Nb formations</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for playlist in playlists %}
+                <tr>
+                    <td>{{ playlist.name }}</td>
+                    <td>{{ playlist.formations|length }}</td>
+                    <td>
+                        <a href="{{ path('admin_playlists_modifier', {id: playlist.id}) }}" class="btn btn-sm btn-warning">Modifier</a>
+                        {% if playlist.formations is empty %}
+                            <form method="post" action="{{ path('admin_playlists_supprimer', {id: playlist.id}) }}"
+                                  style="display:inline"
+                                  onsubmit="return confirm('Supprimer cette playlist ?')">
+                                <input type="hidden" name="_token" value="{{ csrf_token('supprimer_playlist_'~playlist.id) }}">
+                                <button type="submit" class="btn btn-sm btn-danger">Supprimer</button>
+                            </form>
+                        {% else %}
+                            <button class="btn btn-sm btn-danger" disabled title="Des formations sont rattachées">Supprimer</button>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block footer %}{% endblock %}
+{% block javascripts %}{% endblock %}

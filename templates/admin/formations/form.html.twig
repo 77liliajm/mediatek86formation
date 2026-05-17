@@ -1,0 +1,41 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ titre }}{% endblock %}
+{% block stylesheets %}{% endblock %}
+
+{% block top %}
+    <div class="container">
+        <div class="text-left">
+            <img src="{{ app.request.getBasePath()~'/banniere.jpg' }}" alt="banniere du site Mediatek">
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ path('admin_formations') }}">Formations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('admin_playlists') }}">Playlists</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('admin_categories') }}">Catégories</a></li>
+                    <li class="nav-item"><a class="nav-link text-danger" href="{{ path('app_logout') }}">Déconnexion</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>{{ titre }}</h1>
+    {{ form_start(form) }}
+        <div class="mb-3">{{ form_row(form.title) }}</div>
+        <div class="mb-3">{{ form_row(form.description) }}</div>
+        <div class="mb-3">{{ form_row(form.videoId) }}</div>
+        <div class="mb-3">{{ form_row(form.publishedAt) }}</div>
+        <div class="mb-3">{{ form_row(form.playlist) }}</div>
+        <div class="mb-3">{{ form_row(form.categories) }}</div>
+        <button type="submit" class="btn btn-success">Enregistrer</button>
+        <a href="{{ path('admin_formations') }}" class="btn btn-secondary">Annuler</a>
+    {{ form_end(form) }}
+</div>
+{% endblock %}
+
+{% block footer %}{% endblock %}
+{% block javascripts %}{% endblock %}{# empty Twig template #}
